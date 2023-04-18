@@ -1,5 +1,8 @@
 package com.prj.userService.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Transient;
@@ -24,7 +27,7 @@ public class User {
 	private String about;
 
 	@Transient
-	private Rating ratings;
+	private List<Rating> ratings = new ArrayList<>();
 
 	public User(String userId, String name, String email, String about) {
 		super();

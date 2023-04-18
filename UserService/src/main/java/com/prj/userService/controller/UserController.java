@@ -38,7 +38,7 @@ public class UserController {
 
 		List<User> allUser = userserviceImpl.getAllUser();
 
-		return ResponseEntity.status(HttpStatus.OK).body(allUser);
+		return new ResponseEntity<List<User>>(allUser,HttpStatus.OK);
 	}
 
 	@GetMapping("/{id}")
